@@ -1,0 +1,64 @@
+.grid-icons li .iconIMG{
+  width: 6rem!important;
+  height: 6rem!important;
+  line-height: 6rem;
+  border-radius: 6rem;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.25);
+  font-size: 2.5rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.panel > .colorM1{
+  background: #0c4576;
+  background: -moz-linear-gradient(-45deg, #0c4576 0%, #0d6e77 39%, #0c4576 100%);
+  background: -webkit-linear-gradient(-45deg, #0c4576 0%,#0d6e77 39%,#0c4576 100%);
+  background: linear-gradient(135deg, #0c4576 0%,#0d6e77 39%,#0c4576 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c4576', endColorstr='#0c4576',GradientType=1 );
+}
+
+.panel > .colorM2{
+  background: #da2c38;
+  background: -moz-linear-gradient(top, #da2c38 1%, #bf286e 89%);
+  background: -webkit-linear-gradient(top, #da2c38 1%,#bf286e 89%);
+  background: linear-gradient(to bottom, #da2c38 1%,#bf286e 89%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#da2c38', endColorstr='#bf286e',GradientType=0 );
+}
+
+.grid-icons{
+  max-width: 700px;
+}
+
+.alignleft img{
+  left: -0.25rem;
+}
+
+.grid-icons li .iconIMG img{
+  position: relative;
+  top: 0.7rem;
+  height: 3rem;
+}
+
+.smallimg img{
+  top: 0.4rem!important;
+  height: 2.5rem!important;
+}
+
+.large img{
+  top: 0.9rem!important;
+  height: 3.5rem!important;
+}
+
+.myGridH{
+
+}
+.myGridH li{
+  height: 2rem!important;
+  list-style-type :none;
+}
+
+.myGridH img{
+  position: relative;
+  left: 0px;
+  top: 0.15rem;
+}
