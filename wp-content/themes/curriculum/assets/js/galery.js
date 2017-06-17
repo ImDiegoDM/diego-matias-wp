@@ -13,15 +13,41 @@ $(function () {
     $bodyHtml = $('body,html'),
     $wrapper = $('#wrapper');
 
+$('.gallery')
+.on('click','#modalGaley',function(event) {
+  var $a = $(this),
+  $gallery = $a.parents('.gallery'),
+  $modal = $gallery.children('.modal'),
+  $modalImg = $modal.find('#main'),
+  img = $a.find('img').attr('src');
+
+  event.preventDefault();
+  event.stopPropagation();
+
+  $modalImg.attr('src', img);
+
+});
+
 
 $('.gallery')
-.on('click', 'a', function(event) {
+.on('click', '.image', function(event) {
 
   var $a = $(this),
   $gallery = $a.parents('.gallery'),
   $modal = $gallery.children('.modal'),
-  $modalImg = $modal.find('img'),
-  href = $a.attr('href');
+  $modalImg = $modal.find('#main'),
+  $firstImg = $modal.find('#first'),
+  $secondImg = $modal.find('#second'),
+  $thirdImg = $modal.find('#third'),
+  $fourImg = $modal.find('#four'),
+  $title = $modal.find('#title'),
+  $content = $modal.find('#content');
+  href = $a.attr('href'),
+  secondImg = $a.attr('second-img');
+  thirdImg = $a.attr('third-img');
+  fourImg = $a.attr('four-img');
+  title = $a.find('#title').html(),
+  content = $a.find('#content').html();
 
   // Not an image? Bail.
   if (!imgGalery[0])
@@ -40,6 +66,18 @@ $('.gallery')
 
   // Set src.
   $modalImg.attr('src', href);
+
+  // set src for the secon img
+  $firstImg.attr('src',href);
+  $secondImg.attr('src', secondImg);
+  $thirdImg.attr('src', thirdImg);
+  $fourImg.attr('src', fourImg);
+
+  //set html for the title
+  $title.html(title);
+
+  // set html for the content
+  $content.html(content);
 
   // Set visible.
   $modal.addClass('visible');
