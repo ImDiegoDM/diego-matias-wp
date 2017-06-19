@@ -7,4 +7,6 @@
   <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/assets/css/main.css" />
   <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/assets/css/custom.css" />
   <noscript><link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/assets/css/noscript.css" /></noscript>
+  <script src="<?php echo get_template_directory_uri()?>/assets/js/jquery.min.js"></script>
+  <script src="<?php echo get_template_directory_uri()?>/assets/js/jquery.validate.min.js"></script>
 </head>

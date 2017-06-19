@@ -41,13 +41,18 @@ $('.gallery')
   $thirdImg = $modal.find('#third'),
   $fourImg = $modal.find('#four'),
   $title = $modal.find('#title'),
-  $content = $modal.find('#content');
+  $content = $modal.find('#content'),
+  $video = $modal.find('#modalVideo'),
+  video= $a.attr('video'),
   href = $a.attr('href'),
-  secondImg = $a.attr('second-img');
-  thirdImg = $a.attr('third-img');
-  fourImg = $a.attr('four-img');
+  type = $a.attr('type'),
+  secondImg = $a.attr('second-img'),
+  thirdImg = $a.attr('third-img'),
+  fourImg = $a.attr('four-img'),
   title = $a.find('#title').html(),
   content = $a.find('#content').html();
+
+
 
   // Not an image? Bail.
   if (!imgGalery[0])
@@ -68,10 +73,20 @@ $('.gallery')
   $modalImg.attr('src', href);
 
   // set src for the secon img
-  $firstImg.attr('src',href);
-  $secondImg.attr('src', secondImg);
-  $thirdImg.attr('src', thirdImg);
-  $fourImg.attr('src', fourImg);
+  if(type=="imagens"){
+    $firstImg.attr('src',href);
+    $secondImg.attr('src', secondImg);
+    $thirdImg.attr('src', thirdImg);
+    $fourImg.attr('src', fourImg);
+  }
+  else if (type=="videos") {
+    $firstImg.hide();
+    $secondImg.hide();
+    $thirdImg.hide();
+    $fourImg.hide();
+    $video.show();
+    $video.attr('src', video);
+  }
 
   //set html for the title
   $title.html(title);
