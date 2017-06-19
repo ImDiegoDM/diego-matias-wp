@@ -4,6 +4,46 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+
+<?php
+
+function array_sort($array, $on, $order=SORT_ASC)
+{
+    $new_array = array();
+    $sortable_array = array();
+
+    if (count($array) > 0) {
+        foreach ($array as $k => $v) {
+            if (is_array($v)) {
+                foreach ($v as $k2 => $v2) {
+                    if ($k2 == $on) {
+                        $sortable_array[$k] = $v2;
+                    }
+                }
+            } else {
+                $sortable_array[$k] = $v;
+            }
+        }
+
+        switch ($order) {
+            case SORT_ASC:
+                asort($sortable_array);
+            break;
+            case SORT_DESC:
+                arsort($sortable_array);
+            break;
+        }
+
+        foreach ($sortable_array as $k => $v) {
+            $new_array[$k] = $array[$k];
+        }
+    }
+
+    return $new_array;
+}
+
+ ?>
+
 <html>
   <?php get_header() ?>
 	<body>
@@ -105,7 +145,7 @@
               <div class="gallery">
                 <div class="modal" tabIndex="-1">
                   <div class="intro span-5-5 modalcontent" style="height:80% ;margin-top:37px">
-                    <img style="max-height:50%; max-width:100%;" id="main" src="" />
+                    <img style="max-height:70%; max-width:100%; display:block; margin: auto;" id="main" src="" />
                     <a id="modalGaley" href="" ><img id="first" style="max-height:25%; max-width:23%;" src="<?php echo get_template_directory_uri()?>/images/gallery/thumbs/02.jpg" alt="" /></a>
                     <a id="modalGaley" href="" ><img id="second" style="max-height:25%; max-width:23%;" src="<?php echo get_template_directory_uri()?>/images/gallery/thumbs/02.jpg" alt="" /></a>
                     <a id="modalGaley" href="" ><img id="third" style="max-height:25%; max-width:23%;" src="<?php echo get_template_directory_uri()?>/images/gallery/thumbs/02.jpg" alt="" /></a>
@@ -130,6 +170,9 @@
 
                   <?php if(count($projects)>1): ?>
                     <div class="group <?php the_field('size') ?>">
+                      <?php
+                      $projects=array_sort($projects,'order', SORT_ASC);
+                       ?>
                     <?php foreach ($projects as $post): ?>
                         <?php setup_postdata($post); ?>
                       <a href="<?php the_field('img_01')?>" type="<?php the_field('galery_type')?>" video="<?php the_field('video')?>" second-img="<?php the_field('img_02')?>" third-img="<?php the_field('img_03')?>" four-img="<?php the_field('img_04')?>"  class="image filtered <?php the_field('size')?>" data-position="bottom">

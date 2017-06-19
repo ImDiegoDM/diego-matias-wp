@@ -78,6 +78,11 @@ $('.gallery')
     $secondImg.attr('src', secondImg);
     $thirdImg.attr('src', thirdImg);
     $fourImg.attr('src', fourImg);
+    $firstImg.show();
+    $secondImg.show();
+    $thirdImg.show();
+    $fourImg.show();
+    $video.hide();
   }
   else if (type=="videos") {
     $firstImg.hide();
