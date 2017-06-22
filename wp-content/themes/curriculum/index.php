@@ -146,10 +146,12 @@ function array_sort($array, $on, $order=SORT_ASC)
                 <div class="modal" tabIndex="-1">
                   <div class="intro span-5-5 modalcontent" style="height:80% ;margin-top:37px">
                     <img style="max-height:70%; max-width:100%; display:block; margin: auto;" id="main" src="" />
-                    <a id="modalGaley" href="" ><img id="first" style="max-height:25%; max-width:23%;" src="<?php echo get_template_directory_uri()?>/images/gallery/thumbs/02.jpg" alt="" /></a>
-                    <a id="modalGaley" href="" ><img id="second" style="max-height:25%; max-width:23%;" src="<?php echo get_template_directory_uri()?>/images/gallery/thumbs/02.jpg" alt="" /></a>
-                    <a id="modalGaley" href="" ><img id="third" style="max-height:25%; max-width:23%;" src="<?php echo get_template_directory_uri()?>/images/gallery/thumbs/02.jpg" alt="" /></a>
-                    <a id="modalGaley" href="" ><img id="four" style="max-height:25%; max-width:23%;" src="<?php echo get_template_directory_uri()?>/images/gallery/thumbs/02.jpg" alt="" /></a>
+                    <div class=""style="display:flex;max-height:30%">
+                      <a id="modalGaley" href="max-height:100%; max-width:24%;" ><img id="first" style="max-height:100%; max-width:100%" src="<?php echo get_template_directory_uri()?>/images/gallery/thumbs/02.jpg" alt="" /></a>
+                      <a id="modalGaley" href="max-height:100%; max-width:24%;" ><img id="second" style="max-height:100%; max-width:100%" src="<?php echo get_template_directory_uri()?>/images/gallery/thumbs/02.jpg" alt="" /></a>
+                      <a id="modalGaley" href="max-height:100%; max-width:24%;" ><img id="third" style="max-height:100%; max-width:100%" src="<?php echo get_template_directory_uri()?>/images/gallery/thumbs/02.jpg" alt="" /></a>
+                      <a id="modalGaley" href="max-height:100%; max-width:24%;" ><img id="four" style="max-height:100%; max-width:100%" src="<?php echo get_template_directory_uri()?>/images/gallery/thumbs/02.jpg" alt="" /></a>
+                    </div>
                     <iframe id="modalVideo" style="height:50%; max-width:100%; display:none" src="https://www.youtube.com/embed/2NhLPHmefww" frameborder="0" allowfullscreen></iframe>
                   </iframe>
                   </div>
