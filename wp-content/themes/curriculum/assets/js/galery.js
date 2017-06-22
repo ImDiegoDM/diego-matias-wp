@@ -51,6 +51,8 @@ $('.gallery')
   fourImg = $a.attr('four-img'),
   title = $a.find('#title').html(),
   content = $a.find('#content').html();
+  $imageContent=$('#imageContent');
+  console.log($imageContent);
 
 
 
@@ -82,12 +84,14 @@ $('.gallery')
     $secondImg.show();
     $thirdImg.show();
     $fourImg.show();
+    $imageContent.show()
     $video.hide();
   }
   else if (type=="videos") {
     $firstImg.hide();
     $secondImg.hide();
     $thirdImg.hide();
+    $imageContent.hide();
     $fourImg.hide();
     $video.show();
     $video.attr('src', video);
