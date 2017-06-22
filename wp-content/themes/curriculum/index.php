@@ -146,7 +146,7 @@ function array_sort($array, $on, $order=SORT_ASC)
                 <div class="modal" tabIndex="-1">
                   <div class="intro span-5-5 modalcontent" style="height:80% ;margin-top:37px">
                     <img style="max-height:70%; max-width:100%; display:block; margin: auto;" id="main" src="" />
-                    <div id="imageContent" class=""style="display:flex;height:30%; position:relative; left:50%;transform:translateX(-50%)">
+                    <div id="imageContent" class=""style="display:inline-flex;height:30%; position:relative; left:50%;transform:translateX(-50%)">
                       <div id="modalGaley" style="padding:8px 3px"><img id="first" class="thumb" src="<?php echo get_template_directory_uri()?>/images/gallery/thumbs/02.jpg" alt="" /></div>
                       <div id="modalGaley" style="padding:8px 3px" ><img id="second" class="thumb" src="<?php echo get_template_directory_uri()?>/images/gallery/thumbs/02.jpg" alt="" /></div>
                       <div id="modalGaley" style="padding:8px 3px" ><img id="third" class="thumb" src="<?php echo get_template_directory_uri()?>/images/gallery/thumbs/02.jpg" alt="" /></div>
