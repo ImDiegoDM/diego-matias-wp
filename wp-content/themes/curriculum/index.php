@@ -373,7 +373,7 @@ function array_sort($array, $on, $order=SORT_ASC)
 									<div class="span-3-25">
                     <form id="messageForm">
                       <div class="field half">
-                        <label for="name">Name</label>
+                        <label for="name">Nome</label>
                         <input type="text" required name="name" id="name" />
                       </div>
                       <div class="field half">
@@ -381,7 +381,7 @@ function array_sort($array, $on, $order=SORT_ASC)
                         <input type="email" required name="email" id="email" />
                       </div>
                       <div class="field">
-                        <label for="message">Message</label>
+                        <label for="message">Mensagem</label>
                         <textarea name="message" required style="resize:none;" id="message" rows="4"></textarea>
                       </div>
                       <ul class="actions">
