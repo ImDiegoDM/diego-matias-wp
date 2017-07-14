@@ -331,43 +331,6 @@ function array_sort($array, $on, $order=SORT_ASC)
                 }
               </style>
 
-
-              <script type="text/javascript">
-              $(document).ready(function() {
-                $('#send').click(function()
-                {
-                  var form = $('#messageForm');
-                  console.log(form);
-                  form.validate();
-                  if(form.valid()){
-                    $('#send').hide();
-                    $('#floatingCirclesG').show();
-                    $.ajax({
-                      url: '<?php echo esc_url( admin_url('admin-post.php') ); ?>',
-                      type:'POST',
-                      data:
-                      {
-                        name: $('#messageForm #name').val(),
-                        message: $('#messageForm #message').val(),
-                        email: $('#messageForm #email').val(),
-                        action: 'contact_form'
-                      },
-                      success: function(msg)
-                      {
-                        $('#messageForm').hide();
-                        $('#formsuccess').show();
-                      },
-                      error : function(msg){
-                        $('#messageForm').hide();
-                        $('#formerror').show();
-                      }
-                    });
-                  }
-                });
-              })
-
-              </script>
-
               <section class="color-for-<?php the_ID(); ?> <?php the_field('section_type') ?> <?php echo get_field('size') ?> <?php echo get_field('orientation') ?>">
 								<div class="inner columns divided">
 									<div class="span-3-25">
