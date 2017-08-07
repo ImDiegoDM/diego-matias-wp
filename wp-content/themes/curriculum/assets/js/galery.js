@@ -57,8 +57,8 @@ $('.gallery')
 
 
   // Not an image? Bail.
-  if (!imgGalery[0])
-  return;
+  /*if (!imgGalery[0])
+  return;*/
 
   // Prevent default.
   event.preventDefault();
@@ -76,16 +76,22 @@ $('.gallery')
 
   // set src for the secon img
   if(type=="imagens"){
-    $firstImg.attr('src',href);
-    $secondImg.attr('src', secondImg);
-    $thirdImg.attr('src', thirdImg);
-    $fourImg.attr('src', fourImg);
     $firstImg.show();
     $secondImg.show();
     $thirdImg.show();
     $fourImg.show();
     $imageContent.show()
     $video.hide();
+    $firstImg.attr('src',href);
+    $secondImg.attr('src', secondImg);
+    $thirdImg.attr('src', thirdImg);
+    $fourImg.attr('src', fourImg);
+    setTimeout(function() {
+      $firstImg.attr('src',href);
+      $secondImg.attr('src', secondImg);
+      $thirdImg.attr('src', thirdImg);
+      $fourImg.attr('src', fourImg);
+    }, 1000);
   }
   else if (type=="videos") {
     $firstImg.hide();

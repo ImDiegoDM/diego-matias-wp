@@ -144,13 +144,13 @@ function array_sort($array, $on, $order=SORT_ASC)
             <div class="panel">
               <div class="gallery">
                 <div class="modal" tabIndex="-1">
-                  <div class="intro span-5-5 modalcontent" style="height:80% ;margin-top:37px">
+                  <div class="intro span-5-5 modalcontent modalGalery ">
                     <img style="max-height:70%; max-width:100%; display:block; margin: auto;" id="main" src="" />
                     <div id="imageContent" class=""style="display:inline-flex;height:30%; position:relative; left:50%;transform:translateX(-50%)">
-                      <div id="modalGaley" style="padding:8px 3px"><img id="first" class="thumb" src="<?php echo get_template_directory_uri()?>/images/gallery/thumbs/02.jpg" alt="" /></div>
-                      <div id="modalGaley" style="padding:8px 3px" ><img id="second" class="thumb" src="<?php echo get_template_directory_uri()?>/images/gallery/thumbs/02.jpg" alt="" /></div>
-                      <div id="modalGaley" style="padding:8px 3px" ><img id="third" class="thumb" src="<?php echo get_template_directory_uri()?>/images/gallery/thumbs/02.jpg" alt="" /></div>
-                      <div id="modalGaley" style="padding:8px 3px"><img id="four" class="thumb" src="<?php echo get_template_directory_uri()?>/images/gallery/thumbs/02.jpg" alt="" /></div>
+                      <div id="modalGaley" style="padding:8px 3px; height:99%"><img id="first" class="thumb" src="<?php echo get_template_directory_uri()?>/images/gallery/thumbs/02.jpg" alt="" /></div>
+                      <div id="modalGaley" style="padding:8px 3px; height:99%" ><img id="second" class="thumb" src="<?php echo get_template_directory_uri()?>/images/gallery/thumbs/02.jpg" alt="" /></div>
+                      <div id="modalGaley" style="padding:8px 3px; height:99%" ><img id="third" class="thumb" src="<?php echo get_template_directory_uri()?>/images/gallery/thumbs/02.jpg" alt="" /></div>
+                      <div id="modalGaley" style="padding:8px 3px; height:99%"><img id="four" class="thumb" src="<?php echo get_template_directory_uri()?>/images/gallery/thumbs/02.jpg" alt="" /></div>
                     </div>
                     <iframe id="modalVideo" style="height:50%; max-width:100%; display:none" src="https://www.youtube.com/embed/2NhLPHmefww" frameborder="0" allowfullscreen></iframe>
                   </iframe>

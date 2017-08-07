@@ -244,6 +244,28 @@
   padding-right: .5rem;
 }
 
+.modalGalery{
+  height: 80%;
+  margin-top: 37px;
+}
+
+@media screen and (max-width: 736px){
+  .modalGalery{
+    margin-top: 7rem;
+  }
+  .modal{
+    overflow: auto;
+    flex-direction: column;
+    padding-top: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 580px){
+  .modalGalery{
+    margin-top: 5rem;
+  }
+}
+
 .thumb{
   max-height:100%;
   max-width:100%;
