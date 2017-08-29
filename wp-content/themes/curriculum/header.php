@@ -1,7 +1,6 @@
 <head>
   <?php wp_head() ?>
   <title>Diego Matias de Oliveira</title>
-  <meta property="og:image" content="<?php echo get_template_directory_uri()?>/assets/images/FaceBookThumb.png" />
   <meta charset="utf-8" />
   <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/assets/css/bootstrap.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />

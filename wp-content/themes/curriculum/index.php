@@ -44,8 +44,7 @@ function array_sort($array, $on, $order=SORT_ASC)
 
  ?>
 
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:fb="http://ogp.me/ns/fb#">
+<html>
   <?php get_header() ?>
 	<body>
 

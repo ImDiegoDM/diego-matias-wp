@@ -43,6 +43,7 @@ $('.gallery')
   $title = $modal.find('#title'),
   $content = $modal.find('#content'),
   $video = $modal.find('#modalVideo'),
+  aspect = parseFloat($a.attr('aspect')),
   video= $a.attr('video'),
   href = $a.attr('href'),
   type = $a.attr('type'),
@@ -52,7 +53,7 @@ $('.gallery')
   title = $a.find('#title').html(),
   content = $a.find('#content').html();
   $imageContent=$('#imageContent');
-  console.log($imageContent);
+  console.log($a.attr('aspect'));
 
 
 
@@ -76,6 +77,7 @@ $('.gallery')
 
   // set src for the secon img
   if(type=="imagens"){
+    $modalImg.show();
     $firstImg.show();
     $secondImg.show();
     $thirdImg.show();
@@ -94,6 +96,7 @@ $('.gallery')
     }, 1000);
   }
   else if (type=="videos") {
+    $modalImg.hide();
     $firstImg.hide();
     $secondImg.hide();
     $thirdImg.hide();
@@ -101,6 +104,10 @@ $('.gallery')
     $fourImg.hide();
     $video.show();
     $video.attr('src', video);
+    console.log(aspect);
+    var height = $video.width()/aspect;
+    console.log(height);
+    $video.height(height);
   }
 
   //set html for the title
