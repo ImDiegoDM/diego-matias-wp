@@ -152,7 +152,9 @@ function array_sort($array, $on, $order=SORT_ASC)
                       <div id="modalGaley" style="padding:8px 3px; height:99%" ><img id="third" class="thumb" src="<?php echo get_template_directory_uri()?>/images/gallery/thumbs/02.jpg" alt="" /></div>
                       <div id="modalGaley" style="padding:8px 3px; height:99%"><img id="four" class="thumb" src="<?php echo get_template_directory_uri()?>/images/gallery/thumbs/02.jpg" alt="" /></div>
                     </div>
-                    <iframe id="modalVideo" style="height:50%; max-width:100%; display:none" src="https://www.youtube.com/embed/2NhLPHmefww" frameborder="0" allowfullscreen></iframe>
+                    <div class="d-flex justify-content-center align-items-center" style="height:100%">
+                      <iframe id="modalVideo" style="width:100%; display:none" src="https://www.youtube.com/embed/2NhLPHmefww" frameborder="0" allowfullscreen></iframe>
+                    </div>
                   </iframe>
                   </div>
                   <div class="inner modalcontent">
@@ -177,7 +179,7 @@ function array_sort($array, $on, $order=SORT_ASC)
                        ?>
                     <?php foreach ($projects as $post): ?>
                         <?php setup_postdata($post); ?>
-                      <a href="<?php the_field('img_01')?>" type="<?php the_field('galery_type')?>" video="<?php the_field('video')?>" second-img="<?php the_field('img_02')?>" third-img="<?php the_field('img_03')?>" four-img="<?php the_field('img_04')?>"  class="image filtered <?php the_field('size')?>" data-position="center">
+                      <a href="<?php the_field('img_01')?>" type="<?php the_field('galery_type')?>" aspect="<?php the_field('aspect_video')?>" video="<?php the_field('video')?>" second-img="<?php the_field('img_02')?>" third-img="<?php the_field('img_03')?>" four-img="<?php the_field('img_04')?>"  class="image filtered <?php the_field('size')?>" data-position="center">
                         <p id="title" style="display:none"><?php the_title()?></p>
                         <p id="content" style="display:none"><?php the_field('description')?></p>
                         <img src="<?php the_field('img_01')?>" alt="" />
@@ -187,7 +189,7 @@ function array_sort($array, $on, $order=SORT_ASC)
                  <?php else: ?>
                     <?php $post = $projects[0]; ?>
                     <?php setup_postdata($post); ?>
-                    <a href="<?php the_field('img_01')?>" type="<?php the_field('galery_type')?>" video="<?php the_field('video')?>"  second-img="<?php the_field('img_02')?>" third-img="<?php the_field('img_03')?>" four-img="<?php the_field('img_04')?>"  class="image filtered span-2-5" data-position="center">
+                    <a href="<?php the_field('img_01')?>" type="<?php the_field('galery_type')?>" aspect="<?php the_field('aspect_video')?>" video="<?php the_field('video')?>"  second-img="<?php the_field('img_02')?>" third-img="<?php the_field('img_03')?>" four-img="<?php the_field('img_04')?>"  class="image filtered span-2-5" data-position="center">
                       <p id="title" style="display:none"><?php the_title()?></p>
                       <p id="content" style="display:none"><?php the_field('description')?></p>
                       <img src="<?php the_field('img_01')?>" alt="" />
